@@ -1149,8 +1149,7 @@
     <p class="deck">
       Da un'interfaccia Next.js a un orchestratore FastAPI,
       fino a una costellazione di agenti specializzati in esecuzione locale &mdash;
-      e in cima a tutto, MediLog: la cartella clinica elettronica che
-      porta l'intelligenza artificiale direttamente al letto del paziente.
+      e in cima a tutto, MediLog: la cartella clinica elettronica a portata di clic.
     </p>
     <div class="meta">
       <span>Giugno 2026</span>
@@ -1167,7 +1166,7 @@
 
     <p>
       <strong>solveiAgents</strong> &egrave; una piattaforma multi-agente AI
-      progettata per girare interamente su hardware privato &mdash; senza inviare
+      progettata per girare interamente su hardware privato o VPS &mdash; senza inviare
       dati sensibili a servizi cloud di terze parti. Un'interfaccia web moderna
       conversa con un orchestratore centrale, che a sua volta coordina una squadra
       di agenti specializzati: ognuno con un dominio preciso, ognuno alimentato
@@ -1178,7 +1177,7 @@
       L'architettura segue un principio semplice: <strong>un agente specializzato
       batte sempre un generalista</strong>. Un modello addestrato a ragionare su
       referti medici non &egrave; lo stesso che analizza mercati finanziari. Un agente
-      che conosce il tuo wiki aziendale produce risultati diversi da uno che
+      che conosce il tuo wiki personale produce risultati diversi da uno che
       naviga Wikipedia a caso. La specializzazione non &egrave; un limite &mdash; &egrave; una scelta
       di qualit&agrave;.
     </p>
@@ -1198,12 +1197,12 @@
       <div class="diagram-title">Architettura della piattaforma</div>
       <div class="flow">
         <div class="flow-node">
-          <div class="node-box ui">Next.js :3000</div>
+          <div class="node-box ui">Next.js </div>
           <div class="node-label">Interfaccia utente</div>
         </div>
         <div class="arrow">&rarr;</div>
         <div class="flow-node">
-          <div class="node-box orchestrator">&cogs; Orchestratore FastAPI :8000</div>
+          <div class="node-box orchestrator"> Orchestratore FastAPI </div>
           <div class="node-label">LLM coordinatore &middot; Clerk Auth</div>
         </div>
         <div class="arrow">&rarr;</div>
@@ -1234,6 +1233,7 @@
       ciascuno esposto su una porta dedicata e attivato su richiesta dall'orchestratore.
       Il principio on-demand evita sprechi di risorse: gli agenti dormono finché non
       servono, si svegliano in pochi secondi e si riaddormentano dopo l'inattività.
+      Ogni agente e ogni servizio infrastrutturale comune vive nel suo "container docker".
     </p>
 
     <div class="weights">
